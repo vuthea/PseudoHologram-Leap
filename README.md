@@ -12,6 +12,9 @@ An interactive pseudo hologram with 3D scanned object is an application provided
 -  Point: the 3D scanned object can be pointed with 6 finger (finger release and finger point)
 -  Paint: it allows the user to paint the 3D scanned object with real color by using grabbed finger and point finger. The user can also resize the brush of object painting.
 
+<img src="demo1.jpg"/>
+<img src="demo2.jpg"/>
+
 #References
 - <a href="http://www.seedoubleyou.nl/blog/leap-mesh-painter-demo/item36"> Leap Mesh Painter Demo </a>
 - <a href="http://www.instructables.com/id/Reflective-Prism/">REFLECTIVE PRISM</a>
