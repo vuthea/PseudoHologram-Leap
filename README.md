@@ -15,5 +15,5 @@ An interactive pseudo hologram with 3D scanned object is an application provided
 <img src="1.jpg"/>
 
 #References
-- <a href="http://www.seedoubleyou.nl/blog/leap-mesh-painter-demo/item36"> Leap Mesh Painter Demo </a>
+- <a href="http://www.seedoubleyou.nl/blog/leap-mesh-painter-demo/item36"> Leap Mesh Paint</a>
 - <a href="http://www.instructables.com/id/Reflective-Prism/">REFLECTIVE PRISM</a>
