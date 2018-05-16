@@ -14,6 +14,16 @@ An interactive pseudo hologram with 3D scanned object is an application provided
 
 <img src="1.jpg"/>
 
+#Guideline
+<p>2 fingers (one hand): rotate</p>
+<p>4 fingers (one hand): zoom</p>
+<p>hand + 1 finger + swipe up: tutorial</p>				
+<p>hand + 1 finger: point</p>
+<p>fist + 1 finger: paint</p>
+<p>gesture circle cw: change color</p>
+<p>gesture circle ccw: change diameter<p>
+
+
 #References
 - <a href="http://www.seedoubleyou.nl/blog/leap-mesh-painter-demo/item36"> Leap Mesh Paint</a>
 - <a href="http://www.instructables.com/id/Reflective-Prism/">REFLECTIVE PRISM</a>
