@@ -1,8 +1,10 @@
 # PseudoHologram-Leap
 
-<h2><a href="https://vuthea.github.io/PseudoHologram-Leap/" target="_blank">Demo</a></h2>
-
 The Interactive Pseudo Hologram with 3D Scanned Object and Leap Motion
+
+- Use google chrome for better performance and display
+- F11 for fullscreen
+<h2><a href="https://vuthea.github.io/PseudoHologram-Leap/" target="_blank">Demo</a></h2>
 
 # Main Functions
 
