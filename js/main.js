@@ -1,9 +1,9 @@
 
 
 // predefines
-var initialModelPath = '../manith20180424.json';
+var initialModelPath = '../teeth.json';
 var ready = false;
-var $container, $idleBrush, $centerwarning, $leapcolorpicker, $leapdiameterpicker;
+var $container, $idleBrush, $centerwarning, $leapcolorpicker, $leapdiameterpicker, $tutorial;
 var menu;
 var camera, scene, renderer, projector, rayCaster;
 var paintMaterial, pickMaterial, pickGeometry, pickScene;
@@ -164,10 +164,22 @@ var settings = {
 									'Loading'+
 								'</div>'+
 							'</div>';
+			view.tutorial = '<div class="tutorial" style="padding-left: 100px; bottom: '+ windowHeight * view.bottom +'px; left:'+ windowWidth  * view.left+'px; margin: 0 auto; width: '+ windowWidth  * view.width +'px; height: '+ windowHeight*view.height +'px; transform: rotate('+view.anglepicker+'deg) scaleX(-1);">'+
+								'<h2>Guideline</h2>'+
+								'<p>2 fingers (one hand): rotate</p>'+
+								'<p>4 fingers (one hand): zoom</p>'+
+								'<p>hand + 1 finger + swipe up: tutorial</p>'+								
+								'<p>hand + 1 finger: point</p>'+
+								'<p>fist + 1 finger: paint</p>'+
+								'<p>gesture circle cw: change color</p>'+
+								'<p>gesture circle ccw: change diameter</p>'+
+						'</div>';
+
 			view.idleBrush= $('<div style="position: absolute;"><div class="brush-idle"></div></div>').appendTo('body');								
 			$('body').append(view.leapcolorpicker1)
 					 .append(view.leapdiameterpicker1)
-					 .append(view.overlay);
+					 .append(view.overlay)
+					 .append(view.tutorial);
 								
 			view.vleapColorpicker = $.farbtastic('.leapcolorpicker-wheel'+i+'', '.leapcolorpicker-bar');
 	
@@ -198,6 +210,9 @@ function init() {
 
 	// Idle-brush
 	$idleBrush = $('.brush-idle');
+
+	//Tutorial
+	$tutorial = $('.tutorial');
 
 	// Center warning
 	$centerwarning = $('<div id="center-warning" />').appendTo('body');
@@ -263,7 +278,7 @@ function init() {
 	initPaintableMesh();
 	initBrush();
 	initDomEvents();
-//	initMenu();
+	//initMenu();
 	initLeapController();
 }
 
@@ -443,13 +458,38 @@ function updateFinger(frame, view){
 			    	if( gesture.normal[2] <= 0 ) {
 			    		// clockwise movement
 			    		leapColorUpdate = true;
+			    		$tutorial.fadeOut(domAnimSpeed);
 			    		$leapcolorpicker.fadeIn(domAnimSpeed);
 			    	}
 			    	else {
 			    		// counter clockwise
 			    		leapDiameterUpdate = true;
+			    		$tutorial.fadeOut(domAnimSpeed);
 			    		$leapdiameterpicker.fadeIn(domAnimSpeed);
 			    	}
+			    }else if(gesture.type == 'swipe'){
+			    	//Classify swipe as either horizontal or vertical
+			          //var isHorizontal = Math.abs(gesture.direction[0]) > Math.abs(gesture.direction[1]);
+			          //Classify as right-left or up-down
+			          /*if(isHorizontal){
+			              if(gesture.direction[0] > 0){
+			                  //swipeDirection = "right";
+			              } else {
+			                 // swipeDirection = "left";
+			              }
+			          } else { //vertical
+			              if(gesture.direction[1] > 0){
+			              	$tutorial.fadeIn(domAnimSpeed);
+			                 // swipeDirection = "up";
+			              } else {
+			                 // swipeDirection = "down";
+			              }                  
+			          }*/
+
+			          if(gesture.direction[1] > 0){
+			              	$tutorial.fadeIn(domAnimSpeed);
+			                 // swipeDirection = "up";
+			            }
 			    }
 			}
 		}
@@ -457,7 +497,7 @@ function updateFinger(frame, view){
 		if(leapColorUpdate) {
 			if(fl < 1) {
 				leapColorUpdate = false;
-				$leapcolorpicker.fadeOut(domAnimSpeed);
+				$leapcolorpicker.fadeOut(domAnimSpeed);				
 				return;
 			}
 
@@ -494,6 +534,7 @@ function updateFinger(frame, view){
 		else {
 			if(hl == 2) {
 				var f;
+				$tutorial.fadeOut(domAnimSpeed);
 				if(fl > 5 && fl < 8) {
 					// pointer mode
 					for(var q=0; q<fl; q++) {
@@ -525,6 +566,7 @@ function updateFinger(frame, view){
 				}
 			}
 			else {
+				
 				$idleBrush.hide();		
 			 	brush.visible = false;
 			 	leapControlUpdate = true;
