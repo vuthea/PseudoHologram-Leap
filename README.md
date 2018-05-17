@@ -1,7 +1,10 @@
 # PseudoHologram-Leap
+
+<h2><a href="https://vuthea.github.io/PseudoHologram-Leap/" target="_blank">Demo</a></h2>
+
 The Interactive Pseudo Hologram with 3D Scanned Object and Leap Motion
 
-#MainFunctions
+# Main Functions
 
 An interactive pseudo hologram with 3D scanned object is an application provided the interaction between the user and 3D scanned object by using Leap Motion sensor device. This application contains three main functionalities which are:
 1. Reconstructing the 3D object which is captured from the real object by using 3D scanner
@@ -14,7 +17,7 @@ An interactive pseudo hologram with 3D scanned object is an application provided
 
 <img src="1.jpg"/>
 
-#Guideline
+# Guideline
 <p>2 fingers (one hand): rotate</p>
 <p>4 fingers (one hand): zoom</p>
 <p>hand + 1 finger + swipe up: tutorial</p>				
@@ -24,6 +27,6 @@ An interactive pseudo hologram with 3D scanned object is an application provided
 <p>gesture circle ccw: change diameter<p>
 
 
-#References
+# References
 - <a href="http://www.seedoubleyou.nl/blog/leap-mesh-painter-demo/item36"> Leap Mesh Paint</a>
 - <a href="http://www.instructables.com/id/Reflective-Prism/">REFLECTIVE PRISM</a>
