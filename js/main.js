@@ -1,7 +1,7 @@
 
 
 // predefines
-var initialModelPath = '../teeth.json';
+var initialModelPath = 'teeth.json';
 var ready = false;
 var $container, $idleBrush, $centerwarning, $leapcolorpicker, $leapdiameterpicker, $tutorial;
 var menu;
