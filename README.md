@@ -20,13 +20,13 @@ An interactive pseudo hologram with 3D scanned object is an application provided
 <img src="1.jpg"/>
 
 # Guideline
-<p>2 fingers (one hand): rotate</p>
-<p>4 fingers (one hand): zoom</p>
-<p>hand + 1 finger + swipe up: tutorial</p>				
-<p>hand + 1 finger: point</p>
-<p>fist + 1 finger: paint</p>
-<p>gesture circle cw: change color</p>
-<p>gesture circle ccw: change diameter<p>
+<p>2 fingers (one hand): rotation</p>
+<p>4 fingers (one hand): zooming</p>
+<p>hand + 1 finger + swipe up: showing tutorial</p>				
+<p>hand + 1 finger: pointing</p>
+<p>fist + 1 finger: painting</p>
+<p>gesture circle cw: changing color</p>
+<p>gesture circle ccw: changing diameter<p>
 
 
 # References
