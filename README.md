@@ -4,7 +4,8 @@ The Interactive Pseudo Hologram with 3D Scanned Object and Leap Motion
 
 - Use google chrome for better performance and display
 - F11 for fullscreen
-Please connect Leap motion for <h2><a href="https://vuthea.github.io/PseudoHologram-Leap/" target="_blank">Demo</a></h2>
+
+<h2>Please connect Leap motion for <a href="https://vuthea.github.io/PseudoHologram-Leap/" target="_blank">Demo</a></h2>
 
 # Main Functions
 
