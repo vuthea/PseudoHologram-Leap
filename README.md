@@ -5,6 +5,8 @@ The Interactive Pseudo Hologram with 3D Scanned Object and Leap Motion
 - Use google chrome for better performance and display
 - F11 for fullscreen
 
+<h3>Check out our paper <a href="https://www.researchgate.net/publication/326988224_Interactive_Pseudo-Holographic_Rendering_for_3D_Scanned_Model" target="_blank">Paper</a></h3>
+
 <h2>Please connect Leap motion for <a href="https://vuthea.github.io/PseudoHologram-Leap/" target="_blank">Demo</a></h2>
 
 # Main Functions
